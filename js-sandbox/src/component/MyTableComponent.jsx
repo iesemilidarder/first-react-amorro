@@ -8,10 +8,10 @@ class MyTableComponent extends Component {
     }
 
     render() {
-        const customDate=this.state.date.toISOString();
+        const myDate=this.state.date.toISOString();
         return (
             <div className="container">
-                Loren ipsum - {customDate}
+                Loren ipsum - {myDate}
             </div>
         );
     }

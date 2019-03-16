@@ -5,7 +5,8 @@ class MenuComponent extends Component {
     constructor(props) {
         super(props);
 
-        }
+    }
+
     render() {
         const links = this.props.links;
         return (
@@ -20,7 +21,9 @@ class MenuComponent extends Component {
     }
 }
 
-MenuComponent.propTypes = {links: PropTypes.array.isRequired};
+MenuComponent.propTypes = {
+    links: PropTypes.array.isRequired
+};
 
 
 export default MenuComponent;

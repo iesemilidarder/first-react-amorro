@@ -14,12 +14,21 @@ let sideInfo = ["info1", "info2", "info3"];
 
 ReactDOM.render(
     <div className="container">
-        <MenuComponent links={links}/>
-        <ArticleComponent data={data}/>
-        <SidebarComponent info={sideInfo}/>
+        <div className="row">
+            <MenuComponent links={links}/>
+        </div>
+        <div className="row">
+            <ArticleComponent data={data}/>
+            <SidebarComponent
+                info={sideInfo}
+                show={false}
+            />
+        </div>
     </div>
-    , document.getElementById('app')
-);
+    ,
+    document.getElementById("app")
+)
+;
 
 
 //<BootstrapTable columns={columns} data={data}/>

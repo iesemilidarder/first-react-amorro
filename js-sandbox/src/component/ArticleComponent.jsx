@@ -9,13 +9,15 @@ class ArticleComponent extends Component {
     render() {
         const data = this.props.data;
         return (
-            <article className="col-9">
+            <article className="col">
                 {data}
             </article>
         );
     }
 }
 
-ArticleComponent.propTypes = {data: PropTypes.string};
+ArticleComponent.propTypes = {
+    data: PropTypes.string
+};
 
 export default ArticleComponent;

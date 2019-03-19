@@ -13,7 +13,7 @@ class MenuComponent extends Component {
             <header className="col-12">
                 <ul className="navbar navbar-light bg-light">
                     {links.map((l) =>
-                        <li><a href={l}>{l}</a></li>
+                        <li><a href={l} className="btn btn-primary">{l}</a></li>
                     )}
                 </ul>
             </header>

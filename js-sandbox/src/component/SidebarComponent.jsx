@@ -9,7 +9,8 @@ class SidebarComponent extends Component {
     render() {
         const info = this.props.info;
         return (
-            <aside className="col-3">
+            <aside className="col-3" >
+                <button onClick={function(){this.props({ show: false })}}>hide</button>
                 <ol>
                     {info.map((i) =>
                         <li>{i}</li>
@@ -22,10 +23,7 @@ class SidebarComponent extends Component {
 
 SidebarComponent.propTypes = {
     info: PropTypes.array,
-    show: PropTypes.bool.isRequired
+    show: PropTypes.bool
 };
 
 export default SidebarComponent;
-
-//onClick: function() {
-//    this.state({ show: true });

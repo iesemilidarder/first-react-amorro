@@ -29,7 +29,3 @@ ReactDOM.render(
     document.getElementById("app")
 )
 ;
-
-
-//<BootstrapTable columns={columns} data={data}/>
-//

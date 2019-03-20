@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 class ArticleComponent extends Component {
     constructor(props) {
@@ -9,7 +9,7 @@ class ArticleComponent extends Component {
     render() {
         const data = this.props.data;
         return (
-            <article className="col">
+            <article className='col text-justify'>
                 {data}
             </article>
         );

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 class MenuComponent extends Component {
     constructor(props) {
         super(props);
-
     }
 
     render() {

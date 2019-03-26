@@ -7,12 +7,13 @@ class MenuComponent extends Component {
     }
 
     render() {
-        const links = this.props.links;
+        const myData = this.props.links;
         return (
             <header className='col-12'>
                 <ul className='navbar nav navbar-light bg-light'>
-                    {links.map((l) =>
-                        <li className='nav-item'><a href={l} className='nav-link'>{l}</a></li>
+                    {myData.map((o) => {
+                            return <a key={o.label} href={o.link}>{o.label}</a>
+                        }
                     )}
                 </ul>
             </header>

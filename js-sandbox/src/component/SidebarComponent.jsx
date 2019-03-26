@@ -23,7 +23,12 @@ class SidebarComponent extends Component {
                 </button>
                 <div className={this.state.show ? 'visible' : 'invisible'}>
                     <aside className='col-3'>
-
+                        <ol>
+                            {info.map((l) => {
+                                    return <li key={l.label}>{l.label}</li>
+                                }
+                            )}
+                        </ol>
                     </aside>
                 </div>
             </div>
@@ -37,12 +42,3 @@ SidebarComponent.propTypes = {
 };
 
 export default SidebarComponent;
-
-
-//<ol>
-//                             {
-//                                 info.map((i) =>
-//                                     <li>{i}</li>
-//                                 )
-//                             }
-//                         </ol>

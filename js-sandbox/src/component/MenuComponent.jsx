@@ -9,14 +9,17 @@ class MenuComponent extends Component {
     render() {
         const myData = this.props.links;
         return (
-            <header className='col-12'>
-                <ul className='navbar nav navbar-light bg-light'>
-                    {myData.map((o) => {
-                            return <a key={o.label} href={o.link}>{o.label}</a>
-                        }
-                    )}
-                </ul>
-            </header>
+            <div className='row'>
+                <header className='col-12'>
+                    <div className='navbar nav navbar-light bg-light'>
+                        {myData.map((o) => {
+                                return <a key={o.label} href={o.link}
+                                    onClick={()=>this.props.onclick(o.id)}>{o.label}</a>
+                            }
+                        )}
+                    </div>
+                </header>
+            </div>
         );
     }
 }

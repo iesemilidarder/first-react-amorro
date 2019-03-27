@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import MenuComponent from './component/MenuComponent';
-import ArticleComponent from './component/ArticleComponent';
+//import ArticleComponent from './component/ArticleComponent';
 import SidebarComponent from './component/SidebarComponent';
 
 
@@ -43,7 +43,7 @@ class MyArticle extends Component {
 
     _getElement(i) {
         if (i !== undefined) {
-            for (let q=0;q<myData.length;q++){
+            for (let q = 0; q < myData.length; q++) {
                 if (myData[q].id === i) {
                     return myData[q];
                 }
@@ -54,15 +54,18 @@ class MyArticle extends Component {
 
     render() {
         const content = this._getElement(this.state.currentId);
-        console.log(this.state.currentId);
+        console.log('Seleccionado: ' + this.state.currentId);
         console.log(content);
         return <React.Fragment>
-            <MenuComponent links={myData}/>
-            <main className={"row"}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid enim fuga in laboriosam molestiae
-                necessitatibus quo. Autem, distinctio, voluptas.
-            </main>
-            <footer className={"row"}>Hola mundo</footer>
+            <MenuComponent links={myData}
+                           onclick={this._changeSelection}/>
+            <div className={'row'}>
+                <main className={'col'}>
+                    <h1>{content.title}</h1>
+                    <p>{content.text}</p>
+                </main>
+                <SidebarComponent info={sideInfo}/>
+            </div>
         </React.Fragment>;
     }
 }
@@ -70,13 +73,7 @@ class MyArticle extends Component {
 
 ReactDOM.render(
     <div className="container">
-        <div className='row'>
-            <MenuComponent links={myData}/>
-        </div>
-        <div className='row'>
-            <MyArticle/>
-            <SidebarComponent info={sideInfo}/>
-        </div>
+        <MyArticle/>
     </div>
     , document.getElementById('app')
 );

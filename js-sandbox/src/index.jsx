@@ -23,7 +23,7 @@ const myData = [{
         label: 'link3',
         link: '#',
         title: 'Link 3',
-        text: 'Cosa texto 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque doloribus est minus odio ratione rem voluptas? At atque autem beatae corporis delectus error.'
+        text: 'Cosa texto 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque doloribus est minus odio ratione rem voluptas? At atque autem beatae corporis delectus error.'
     }];
 const sideInfo = [{label: 'info1'}, {label: 'info2'}, {label: 'info3'}];
 

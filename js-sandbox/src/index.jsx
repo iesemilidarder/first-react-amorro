@@ -32,7 +32,6 @@ class MyArticle extends Component {
         super(props);
         this.state = {currentId: 1};
         this._changeSelection = this._changeSelection.bind(this);
-        this._getElement = this._getElement.bind(this);
     }
 
     _changeSelection(id) {
@@ -49,7 +48,7 @@ class MyArticle extends Component {
                 }
             }
         }
-        return {title: 404, content: "Not found"};
+        return {title: 404, text: "Not found"};
     }
 
     render() {
@@ -61,7 +60,7 @@ class MyArticle extends Component {
                            onclick={this._changeSelection}/>
             <div className={'row'}>
                 <main className={'col'}>
-                    <h1>{content.title}</h1>
+                    <h1 className={'text-center'}>{content.title}</h1>
                     <p>{content.text}</p>
                 </main>
                 <SidebarComponent info={sideInfo}/>
@@ -72,7 +71,7 @@ class MyArticle extends Component {
 
 
 ReactDOM.render(
-    <div className="container">
+    <div className='container'>
         <MyArticle/>
     </div>
     , document.getElementById('app')
